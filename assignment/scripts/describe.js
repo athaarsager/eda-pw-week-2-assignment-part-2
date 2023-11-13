@@ -26,10 +26,11 @@ if (number >= 2) {
 
 
 // 1. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We create a variable called "name" and set it equal to the string "Dane".
+// Then we create a conditional statement. If the value of "name" is equal to the string "Mary",
+// then we log the string "Hi, Mary!" to the console.
+// Otherwise, we log the string "How do you do?".
+// In this example, since "name" is equal to "Dane", not "Mary", we will console log "How do you do?"
 
 //CODE
 /*
@@ -45,10 +46,13 @@ if (name === 'Mary') {
 */
 
 // 2. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We declare a variable called "secret", but do not set it's value to anything.
+// We create a variable called "code" and set it equal to the number 123.
+// We create a conditional. If the value stored in "code" is equal to the number 123,
+// then we set "secret" equal to the string "super" and "code" equal to itself times 2. (In other words, we double code's value.)
+// We create another conditional. If the value stored in code is greater than 250,
+// then we set the variable "secret" equal to the string "duper".
+// Finally, we console log "secret", which is equal to "super," thus causing the console to display the string "super".
 
 //CODE
 /*
@@ -70,10 +74,18 @@ console.log(secret)
 */
 
 // 3. WRITE YOUR DESCRIPTION HERE
-// 
-// 
-// 
-//
+// We declare the variable "isStudent" and set it equal to the boolean value of true.
+// We declare the variable "age" and set it equal to the number 34.
+// We declare the variable "zip" and set it equal to the number 55407.
+// We create a conditional. If the value stored in "isStudent" is equal to true AND the variable "zip" is greater than the number 80000,
+// Then we console log the string "You're a student on the West Coast!"
+// Otherwise, if "isStudent" is false, or "age" is less than 30,
+// Then we console log the string "What are your hobbies?" Only one of the above conditions has to evaluate to true for this string to be logged.
+// Otherwise, if "isStudent" is true (no other condition necessary),
+// Then we console log the string "Welcome to Prime!"
+// Otherwise, if none of the above expressions evaluate to true, then
+// The computer is at a loss for conversation and console logs "How about the weather?"
+// In this case, the computer will log "Welcome to Prime!" to the console as the current variable values cause the first two expressions to evaluate false.
 
 //CODE
 /*
@@ -130,12 +142,17 @@ if (number >= 2) {
 // -- it is, so we set colorOne and colorTwo to 'purple'
 
 /*
+// FIX: colorOne is set to "red" and colorTwo is set to "blue", but instructions asked for opposite
+// should be colorOne = "blue";
+//           colorTwo = "red";
 let colorOne = 'red';
 let colorTwo = 'blue';
 let mix = true;
 
 if (mix === true) {
   colorOne = 'purple';
+// FIX: we should set colorTwo to "purple" as well after setting colorOne, as that is what the instructions want.
+//should be : colorTwo = "purple";
 }
 */
 
@@ -146,6 +163,11 @@ if (mix === true) {
 /*
 let temp = 40;
 const time = 4;
+
+// FIX: okay, so this would technically still work with the current values of the variables...
+// HOWEVER, based on the instructions, the expression in the if statement is incorrect and could evaluate incorrectly with different variable values.
+// The if statement currently includes an "or" operator rather than "and".
+// should be: if (temp > 39 && time >= 4)
 
 if (temp > 39 || time >= 4) {
   console.log('throw away the food!');
@@ -159,6 +181,13 @@ if (temp > 39 || time >= 4) {
 /*
 let age = 21;
 const minAge = 21;
+
+// FIX: The if statement is currently set up exactly how it is worded in the instructions.
+// However, to get it to evaluate for the results we want, we need to alter it.
+// Currently, the "no entry" statement will print even if the minAge is equal to Age because the "less than or equal to" operator is inclusive. 
+// However, we want it to be exclusive so that "enter" is logged if minAge is equal to age.
+// should be if(minAge < age)
+// This will ensure that if minAge is equal to or greater than age, the second console.log statement will print rather than the first.
 
 if(minAge <= age) {
   console.log('no entry');
